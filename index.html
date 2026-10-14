@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17365d">
+  <meta name="description" content="madiShare AI ระบบบริหารคลังยาและกระจายยาระหว่างโรงพยาบาล">
+  <title> madiShare AI | ระบบบริหารคลังยา</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">✚</div><div><strong>madiShare <b>AI</b></strong><small>MEDICINE NETWORK</small></div><button class="icon-btn mobile-close" data-action="close-nav" aria-label="ปิดเมนู">×</button></div>
+      <div class="side-label">เมนูหลัก <span>MAIN MENU</span></div>
+      <nav id="main-nav">
+        <button class="nav-item active" data-page="home"><span class="nav-icon">▦</span><span>ภาพรวมระบบ<small>Home / Dashboard</small></span></button>
+        <button class="nav-item" data-page="stock"><span class="nav-icon">▤</span><span>คลังยา<small>Stock Management</small></span></button>
+        <button class="nav-item" data-page="tracking"><span class="nav-icon">⇢</span><span>ติดตามการจัดส่ง<small>Delivery Tracking</small></span></button>
+        <button class="nav-item" data-page="reports"><span class="nav-icon">▥</span><span>รายงาน<small>Reports & Analytics</small></span></button>
+        <button class="nav-item" data-page="about"><span class="nav-icon">♡</span><span>เกี่ยวกับเรา<small>About Us</small></span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="demo-card"><span class="pulse-dot"></span><div><strong>Demo Mode</strong><small>ข้อมูลจำลองสำหรับนำเสนอ</small></div><span class="demo-tag">ON</span></div>
+        <button class="nav-item reset-nav" data-action="reset"><span class="nav-icon">↻</span><span>รีเซ็ตข้อมูลตัวอย่าง<small>Reset demo data</small></span></button>
+        <div class="side-foot">♧ ระบบต้นแบบเพื่อการศึกษา</div>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim" data-action="close-nav"></div>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="top-left"><button class="icon-btn menu-toggle" data-action="open-nav" aria-label="เปิดเมนู">☰</button><div class="breadcrumb">ระบบบริหารคลังยา <span>›</span> <strong id="breadcrumb-label">ภาพรวมระบบ</strong></div></div>
+        <div class="top-actions">
+          <div class="hospital-select">✚ <span>โรงพยาบาลศิริเวช</span>⌄</div>
+          <form class="top-search" id="global-search"><span>⌕</span><input id="global-query" placeholder="ค้นหาในระบบ..." aria-label="ค้นหาในระบบ"><button title="ค้นหา">↵</button></form>
+          <div class="notification-wrap"><button class="icon-btn notification-btn" data-action="notifications" aria-label="การแจ้งเตือน">♧<i></i></button><div class="notification-pop hidden" id="notification-pop"></div></div>
+          <div class="profile"><div class="avatar">กม</div><div><strong>กิตติมา บัวพรม</strong><small>ผู้ดูแลระบบ</small></div></div>
+          <button class="icon-btn logout" data-action="logout" title="ออกจากระบบ (จำลอง)">⇥</button>
+        </div>
+      </header>
+      <div id="login-banner" class="login-banner hidden">โหมดสาธิต: คลิก “กลับเข้าสู่ระบบ” เพื่อดำเนินการต่อ <button data-action="login">กลับเข้าสู่ระบบ</button></div>
+      <div class="page-content" id="page-content"></div>
+    </main>
+  </div>
+  <div class="modal-backdrop hidden" id="modal-backdrop"><section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title"><header class="modal-head"><div><span class="modal-kicker">MADISHARE AI · DEMO</span><h2 id="modal-title">รายละเอียด</h2></div><button class="icon-btn" data-action="close-modal" aria-label="ปิดหน้าต่าง">×</button></header><div class="modal-body" id="modal-body"></div></section></div>
+  <div class="toast hidden" id="toast" role="status"><span>✓</span><div id="toast-message"></div><button data-action="dismiss-toast" aria-label="ปิด">×</button></div>
+  <script src="app.js"></script>
+</body>
+</html>
